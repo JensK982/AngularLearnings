@@ -1,0 +1,67 @@
+<div>
+  <h3>{{ title }}</h3>
+</div>
+<br />
+<div>
+  <label>ID: <input type="number" [(ngModel)]="user.Id" /></label>
+</div>
+<div>
+  <label
+    >FirstName:
+    <input
+      type="text"
+      [(ngModel)]="user.FirstName"
+      (input)="FnameCheck()"
+  /></label>
+  <div style="color: red" [hidden]="!errorMessagesFname">
+    {{ errorMessagesFname }}
+  </div>
+</div>
+<div>
+  <label
+    >LastName:
+    <input type="text" [(ngModel)]="user.LastName" (input)="LnameCheck($event)"
+  /></label>
+  <div style="color: red" [hidden]="!errorMessagesLname">
+    {{ errorMessagesLname }}
+  </div>
+</div>
+<div>
+  <label
+    >Age:
+    <input type="number" [(ngModel)]="user.Age" (input)="AgeCheck($event)"
+  /></label>
+  <div style="color: red" [hidden]="!errorMessagesAge">
+    {{ errorMessagesAge }}
+  </div>
+</div>
+<div>
+  <label>Birthday: <input type="date" [(ngModel)]="user.DateOfBirth" /></label>
+</div>
+<div>
+  <label
+    >Email:
+    <input type="email" [(ngModel)]="user.email" (input)="EmailCheck($event)"
+  /></label>
+  <div style="color: red" [hidden]="!errorMessagesEmail">
+    {{ errorMessagesEmail }}
+  </div>
+</div>
+<br /><br />
+<div>
+  <label>Street: <input type="text" [(ngModel)]="user.adresse.Street" /></label>
+</div>
+<div>
+  <label
+    >PostalCode: <input type="text" [(ngModel)]="user.adresse.PostalCode"
+  /></label>
+</div>
+<div>
+  <label
+    >Country: <input type="text" [(ngModel)]="user.adresse.Country"
+  /></label>
+</div>
+<div>
+  <label>Code: <input type="text" [(ngModel)]="user.adresse.City" /></label>
+</div>
+<button (click)="onButtonClick($event)" [disabled]="!valid">Submit</button>
