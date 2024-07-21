@@ -1,0 +1,25 @@
+<div>
+  <h3>{{ title }}</h3>
+</div>
+
+<div>
+  {{ txtParent }}
+  <div>
+    <button (click)="onButtonClick()">Save Parent</button>
+  </div>
+</div>
+
+<div>
+  <div>
+    <chd-child1
+      [txtParent]="txtParent"
+      (textChanage)="onChild1Click($event)"
+    ></chd-child1>
+  </div>
+</div>
+
+<div>
+  <div>
+    <chd-child2 [txtParent]="txtParent"></chd-child2>
+  </div>
+</div>
