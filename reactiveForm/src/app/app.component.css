@@ -1,0 +1,8 @@
+.error-text {
+  color: red; /* Change the text color to red */
+  font-weight: bold; /* Make the text bold */
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c2c7; /* Border to highlight the text */
+  padding: 2px 4px; /* Padding around the text */
+  border-radius: 3px; /* Slightly rounded corners */
+}
